@@ -13,24 +13,32 @@ function App() {
     if(input){
       const lastChar = input.slice(-1);
       const operators = ['+', '-', '*', '/'];
+      
 
-      if (operators.includes(lastChar) && operators.includes(val)) {
-        // Si es un operador, sobrescribir el último carácter con val
-        setInput(input.slice(0, -1) + val);
-      } else {
-        // De lo contrario, concatenar val normalmente
-        setInput(input + val);
+      if(String(input)!='Infinity'){        
+        if (operators.includes(lastChar) && operators.includes(val)) {
+          // Si ya hay un operador, sobrescribir el último carácter con el nuevo operador
+          setInput(input.slice(0, -1) + val);
+        } else {
+          // De lo contrario, concatenar val normalmente
+          setInput(input + val);
+        }
+      } else{        
+        setInput(''+val);
       }
-    }
-    else{
+    } else{
       setInput(input + val);
     }
-    
   };
 
   const calcularResultado = () => {
     if(input){
-      setInput(String(evaluate(input)));
+      let result = evaluate(input)
+      if(isNaN(result)){
+        setInput('');        
+      } else{
+        setInput(String(result));
+      }
     }    
   };
 
