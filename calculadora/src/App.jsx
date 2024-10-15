@@ -12,8 +12,7 @@ function App() {
   const agregarInput = val => {
     if(input){
       const lastChar = input.slice(-1);
-      const operators = ['+', '-', '*', '/'];
-      
+      const operators = ['+', '-', '*', '/'];      
 
       if(String(input)!='Infinity'){        
         if (operators.includes(lastChar) && operators.includes(val)) {
