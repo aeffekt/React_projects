@@ -1,4 +1,4 @@
-En este repositorio va a encontrar una serie de proyectois básicos de aprendisaje de React tomados del curso de freeCodeCamp "Aprende React Desde Cero"
+En este repositorio va a encontrar una serie de proyectos básicos de aprendisaje de React tomados del curso de freeCodeCamp "Aprende React Desde Cero"
 
 Ejercicios:
 1- Copia de los testimonios de la página freeCodeCamp
